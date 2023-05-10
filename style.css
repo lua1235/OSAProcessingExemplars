@@ -1,0 +1,38 @@
+/* will have css for all pages */
+html {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 20px;
+    padding: 0px;
+}
+.navBar {
+    background-color: #fad13e;
+    font-family: Helvetica, Arial, sans-serif;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+}
+.navBar a{
+    color: #166936;
+    float: left;
+    padding: 20px 10px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    margin: 0;
+}
+.navBar a:hover{
+    background-color: #af932c;
+    color: white;
+}
+.navBar a.active{
+    background-color: #166936;
+    color: white;
+}
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}

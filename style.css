@@ -37,5 +37,7 @@ body {
     padding: 20px;
 }
 canvas {
+    width: max-content;
+    height: auto;
     border: 5px solid black;
 }

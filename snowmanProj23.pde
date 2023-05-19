@@ -5,7 +5,7 @@
 * 10/14/2020
 
 * This program is my own work - Digital Signature DT */
-
+/* @pjs preload="gradient.png"; */
 Snowman s; // player
 
 Mountain m;

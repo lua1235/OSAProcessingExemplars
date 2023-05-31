@@ -117,7 +117,7 @@ rect(torsoX, torsoY+17, 90, 6); // Gray stripe
 rect(torsoX, torsoY+27, 90, 6); //
 // Head
 fill(0); // Set fill to black
-circle(headX, headY, headRadius); // Head
+ellipse(headX, headY, headRadius, headRadius); // Head
 fill(255); // Set fill to white
 ellipse(eyeX, eyeY, eyeR, eyeR); // Large eye
 fill(0); // Set fill to black
@@ -137,16 +137,16 @@ line(shoulderX, shoulderY, elbowX, elbowY);
 //Shoulder
 strokeWeight(4);
 fill(0); // Set fill to black
-circle(shoulderX, shoulderY, 10);
+ellipse(shoulderX, shoulderY, 10, 10);
 //Forearm
 strokeWeight(8);
 stroke(100);
 line(elbowX, elbowY,wristX, wristY);
 //Elbow
 noStroke();
-circle(elbowX, elbowY, 8);
+ellipse(elbowX, elbowY, 8, 8);
 strokeWeight(2);
-circle(wristX, wristY, 4);
+ellipse(wristX, wristY, 4, 4);
 //Fingers
 strokeWeight(6);
 stroke(150);

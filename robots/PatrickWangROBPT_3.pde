@@ -16,7 +16,6 @@ void setup() {
 }
 
 void draw() {
-  print (b);
   float targetX = mouseX;
   x += (targetX - x) * easing;
 

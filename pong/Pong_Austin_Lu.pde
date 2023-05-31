@@ -7,7 +7,7 @@ Use A&D keys or arrow keys to move the paddle.
 Difficulty is based on ai detection size.
 * This program is my own work - A.L.   */
 
-PFont font;
+//PFont font;
 void setup(){
   size(700,700);
   background(0);
@@ -158,8 +158,8 @@ void ref() { // The referee
 void draw(){
   background(0);
   print("DetectSize:",detectSize,"Difficulty:",difficulty,"          ");
-  font=loadFont("OCRAExtended-48.vlw");
-  textFont(font);
+  //font=loadFont("OCRAExtended-48.vlw");
+  //textFont(font);
   if(mousePressed && gameStart==0){
     gameStart=1;
     

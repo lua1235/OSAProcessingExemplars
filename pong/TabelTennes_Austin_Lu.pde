@@ -21,7 +21,7 @@ float vYGrav=0.1; //ball velocity Y gravity effect
 int vZ=5; //ball velocity Z
 int aX=300; //ai paddle position X
 int aY=300; //ai paddle position Y
-float easing=0.3; //dampener for ai paddle
+float easing=0.5; //dampener for ai paddle
 int pScore=0; //player score value
 int aScore=0; //opponent score value
 int detectSize=450; //main factor of difficulty
@@ -73,7 +73,7 @@ void draw(){
     fill(250,255);
     text("Select Difficulty",200,150);
     text("Press h for rules",500,100);
-    difficulty();
+    challenge();
   }else if(gameStart==3){ // Win screen
     win();
   }else if(gameStart==4){
@@ -88,7 +88,7 @@ void draw(){
     vZ=5; //ball velocity ZSide=0;
     scoreSide=4; //resets the score side
     text(str(countDown),350,350);
-    delay(1000);
+    //delay(1000);
     countDown-=1;
     if(countDown<0){
     gameStart=2;
@@ -98,6 +98,7 @@ void draw(){
   rules();
 }
 void paddle2(){ //Opponent's paddle
+	float easemod=0;
   stroke(30,30,180,255); 
   strokeWeight(3);
   fill(29,29,206,255);
@@ -108,10 +109,12 @@ void paddle2(){ //Opponent's paddle
    // smooth movement
 if(difficulty==0){
   detectSize=450;
+	easemod += 0.2
 }else if(difficulty==1){
-  detectSize=350;
+  detectSize=450;
+	easemod += 0.1
 }else if(difficulty==2){
-  detectSize=250;
+  detectSize=450;
 }
 if(z<=detectSize && scoreSide!=0){
  float targetX = x;
@@ -121,7 +124,7 @@ if(z<=detectSize && scoreSide!=0){
   }else if(dx<=-5){
     dx=-5;
   }
-  aX += dx * easing;
+  aX += dx * (easing-easemod);
   
   float targetY = y;
   float dy = targetY - aY;
@@ -251,7 +254,7 @@ void ball() {
   fill(255);
   }
   noStroke();
-  circle(x,y,z/50);
+  ellipse(x,y,z/50,z/50);
   y+=vY;
   z+=vZ;
   x+=vX;
@@ -296,7 +299,7 @@ void paddle1Y(){
     y+=vY*2;
   }
 }
-void difficulty() {
+void challenge() {
   strokeWeight(5);
   for(int i=0; i<3; i++){
   stroke(255,255);

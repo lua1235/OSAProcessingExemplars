@@ -43,7 +43,7 @@ void ballRender(){
   
   for(int i=1; i<1000; i+=1){
     fill(250,255-i);
-    circle(x-vX/i,y-vY/i,10-i/1000);
+    ellipse(x-vX/i,y-vY/i,10-i/1000,10-i/1000);
   }
   x+=vX;
   y+=vY;
@@ -110,7 +110,7 @@ void ai() {
  }
  }
 }
-void difficulty() {
+void challenge() {
   strokeWeight(5);
   for(int i=0; i<3; i++){
   stroke(255,255);
@@ -201,7 +201,7 @@ void draw(){
     textSize(32);
     fill(250,255);
     text("Select Difficulty",200,150);
-    difficulty();
+    challenge();
   }else if(gameStart==3){ // Win screen
      textSize(32);
     fill(250,255);

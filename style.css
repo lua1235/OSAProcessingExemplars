@@ -43,6 +43,5 @@ header {
 .exemplars {
     max-width: 60%;
     max-height: 50%;
-    height: auto;
     border: 5px solid black;
 }

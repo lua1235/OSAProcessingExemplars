@@ -136,6 +136,7 @@ void colorSelector(){
 }
 
 void draw() { // runs and contains all functions
+  ellipse(mouseX, mouseY, 10, 10)
   pen();
   slider();
   colorSelector();

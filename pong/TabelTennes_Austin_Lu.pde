@@ -207,9 +207,9 @@ void collisions() { // Z axis collisions
 void boundaries() { //determines when the ball goes out of bounds
   int boundLeft=290-((z-150)/3);
   int boundRight=410+((z-150)/3);
-  print("("+str(boundLeft)+","+str(boundRight)+","+str(x)+")");
+  //print("("+str(boundLeft)+","+str(boundRight)+","+str(x)+")");
   if(x<=boundLeft || x>=boundRight){
-    print("trigger ");
+    //print("trigger ");
    vX=-vX;
    x+=vX*10;
   }

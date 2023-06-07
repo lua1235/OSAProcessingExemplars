@@ -41,7 +41,7 @@ header {
     padding: 40px;
 }
 .exemplars {
-    max-width: 60%;
-    max-height: 50%;
+    /* max-width: 60%; */
+    /* max-height: 50%; */
     border: 5px solid black;
 }

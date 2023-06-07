@@ -27,9 +27,11 @@ void setup() {
 
 void draw() {
   //print (mouseX, mouseY);
-
+	float mX = mouseX;
+	float mY = mouseY;
 //clear button
- if (mousePressed && ((mouseX > 1300*(4/5)) && (mouseX < (1300*(4/5))+200) && (mouseY > 100) && (mouseY < 100+50))) { 
+
+ if (mousePressed && ((mX > 1300*(4/5)) && (mX < (1300*(4/5))+200) && (mY > 100) && (mY < 100+50))) { 
     fill(0);
     background (255);
   } else {
@@ -41,7 +43,7 @@ void draw() {
   text ("Clear Paint", 1333*(4/5), 135);
   
   //random color button
- if (mousePressed && ((mouseX > 300*(4/5)) && (mouseX < (300*(4/5))+300) && (mouseY > 100) && (mouseY < 100+40))) { 
+ if (mousePressed && ((mX > 300*(4/5)) && (mX < (300*(4/5))+300) && (mY > 100) && (mY < 100+40))) { 
     fill(0);
     red = random (255);
     green = random (255);
@@ -62,7 +64,7 @@ void draw() {
   rect (1100*(4/5), 0, 10*(4/5), 100);
 
   //brush sizes
-  float sd = dist(mouseX, mouseY, 1150*(4/5), 50); //small brush
+  float sd = dist(mX, mY, 1150*(4/5), 50); //small brush
   if (mousePressed && (sd < rsbrush)) {
     fill(0);
     rpaint = 3;
@@ -71,7 +73,7 @@ void draw() {
   }
   ellipse(1150*(4/5), 50, rsbrush, rsbrush);
 
-  float md = dist(mouseX, mouseY, 1250*(4/5), 50); //medium brush
+  float md = dist(mX, mY, 1250*(4/5), 50); //medium brush
   if (mousePressed && (md < rmbrush)) {
     fill(0);
     rpaint = 6;
@@ -80,7 +82,7 @@ void draw() {
   }
   ellipse(1250*(4/5), 50, rmbrush, rmbrush);
 
-  float ld = dist(mouseX, mouseY, 1350*(4/5), 50); //large brush
+  float ld = dist(mX, mY, 1350*(4/5), 50); //large brush
   if (mousePressed && (ld < rlbrush)) {
     fill(0);
     rpaint = 12;
@@ -89,7 +91,7 @@ void draw() {
   }
   ellipse(1350*(4/5), 50, rlbrush, rlbrush);
 
- float xld = dist(mouseX, mouseY, 1450*(4/5), 50); //large brush
+ float xld = dist(mX, mY, 1450*(4/5), 50); //large brush
   if (mousePressed && (xld < rxlbrush)) {
     fill(0);
     rpaint = 18;
@@ -99,7 +101,7 @@ void draw() {
   ellipse(1450*(4/5), 50, rxlbrush, rxlbrush);
 
 //brush color
-  float dRed = dist(mouseX, mouseY, 100*(4/5), 50); //red brush
+  float dRed = dist(mX, mY, 100*(4/5), 50); //red brush
   if (mousePressed && (dRed < 30)) {
     fill(150, 0, 0);
     red = 255;
@@ -110,7 +112,7 @@ void draw() {
   }
   ellipse(100*(4/5), 50, 30, 30);
 
-  float dOrange = dist(mouseX, mouseY, 200*(4/5), 50); //orange brush
+  float dOrange = dist(mX, mY, 200*(4/5), 50); //orange brush
   if (mousePressed && (dOrange < 30)) {
     fill(#D87700);
     red = 255;
@@ -121,7 +123,7 @@ void draw() {
   }
   ellipse(200*(4/5), 50, 30, 30);
 
-  float dYellow = dist(mouseX, mouseY, 300*(4/5), 50); //yellow brush
+  float dYellow = dist(mX, mY, 300*(4/5), 50); //yellow brush
   if (mousePressed && (dYellow < 30)) {
     fill(#D0D100);
     red = 254;
@@ -132,7 +134,7 @@ void draw() {
   }
   ellipse(300*(4/5), 50, 30, 30);
 
-  float dGreen = dist(mouseX, mouseY, 400*(4/5), 50); //green brush
+  float dGreen = dist(mX, mY, 400*(4/5), 50); //green brush
   if (mousePressed && (dGreen < 30)) {
     fill(0, 150, 0);
     red = 0; 
@@ -143,7 +145,7 @@ void draw() {
   }
   ellipse(400*(4/5), 50, 30, 30);
 
-  float dBlue = dist(mouseX, mouseY, 500*(4/5), 50); //blue brush
+  float dBlue = dist(mX, mY, 500*(4/5), 50); //blue brush
   if (mousePressed && (dBlue < 30)) {
     fill(0, 0, 150);
     red = 0;
@@ -154,7 +156,7 @@ void draw() {
   }
   ellipse(500*(4/5), 50, 30, 30);
 
-  float dPurple = dist(mouseX, mouseY, 600*(4/5), 50); //purple brush
+  float dPurple = dist(mX, mY, 600*(4/5), 50); //purple brush
   if (mousePressed && (dPurple < 30)) {
     fill(150, 0, 0);
     red = 225;
@@ -165,7 +167,7 @@ void draw() {
   }
   ellipse(600*(4/5), 50, 30, 30);
 
-  float dBrown = dist(mouseX, mouseY, 700*(4/5), 50); //brown brush
+  float dBrown = dist(mX, mY, 700*(4/5), 50); //brown brush
   if (mousePressed && (dBrown < 30)) {
     fill(#764D19);
     red = 152;
@@ -176,7 +178,7 @@ void draw() {
   }
   ellipse(700*(4/5), 50, 30, 30);
 
-  float dBlack = dist(mouseX, mouseY, 800*(4/5), 50); //black brush
+  float dBlack = dist(mX, mY, 800*(4/5), 50); //black brush
   if (mousePressed && (dBlack < 30)) {
     fill(100);
     red = 0;
@@ -187,7 +189,7 @@ void draw() {
   }
   ellipse(800*(4/5), 50, 30, 30);
 
-  float dEraser = dist(mouseX, mouseY, 950*(4/5), 50); //eraser
+  float dEraser = dist(mX, mY, 950*(4/5), 50); //eraser
   if (mousePressed && (dEraser < 30)) {
     fill(70);
     red = 255;
@@ -204,6 +206,6 @@ void draw() {
   //coloring
   if (mousePressed) {
     fill (red, green, blue);
-    ellipse (mouseX, mouseY, rpaint, rpaint);
+    ellipse (mX, mY, rpaint, rpaint);
   }
 }

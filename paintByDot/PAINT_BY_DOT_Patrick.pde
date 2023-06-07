@@ -4,7 +4,7 @@
  * Computer Science 10
  * April 2, 2020
  * This program is my own work -PW */
-
+// Modified by Austin for compatibility and functionality.
 //brush size
 int rsbrush = 3; 
 int rmbrush = 6;
@@ -26,7 +26,7 @@ void setup() {
 }
 
 void draw() {
-  print (mouseX, mouseY);
+  //print (mouseX, mouseY);
 
 //clear button
  if (mousePressed && ((mouseX > 1300*(4/5)) && (mouseX < (1300*(4/5))+200) && (mouseY > 100) && (mouseY < 100+50))) { 

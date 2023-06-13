@@ -19,7 +19,7 @@ header {
     padding-bottom: 1px;
     /*background-color: ivory; */
     bottom: 0;
-    margin: 0% 15%;
+    margin: 0% 12%;
 }
 .logo {
     display: inline-block;
@@ -35,7 +35,7 @@ header {
     font-family: Helvetica, Arial, sans-serif;
     position: sticky;
     overflow: hidden;
-    margin: 0% 15%;
+    margin: 0% 12%;
     border-bottom: 5px solid #166936;
     top: 0;
 }
@@ -59,12 +59,16 @@ header {
 .text {
     font-family: Arial, Helvetica, sans-serif;
     padding: 40px;
-    margin: 0% 15%;
+    margin: 0% 12%;
     background-color:ivory;
 }
 .exemplars {
-    max-width: 100%;
+    max-width: 95%;
     max-height: 70%;
     /* width: auto; */
-    border: 5px solid #701424;
+    border: 5px solid #0b331a;
+}
+
+h4 {
+    text-indent: 20px;
 }

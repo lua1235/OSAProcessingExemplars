@@ -157,7 +157,7 @@ void ref() { // The referee
 }
 void draw(){
   background(0);
-  print("DetectSize:",detectSize,"Difficulty:",difficulty,"          ");
+  //print("DetectSize:",detectSize,"Difficulty:",difficulty,"          ");
   //font=loadFont("OCRAExtended-48.vlw");
   //textFont(font);
   if(mousePressed && gameStart==0){

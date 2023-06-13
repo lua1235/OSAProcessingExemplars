@@ -38,7 +38,7 @@ void keyPressed() {
   ball.xSpeed = ball.xSpeed*1.25;
   ball.ySpeed = ball.ySpeed*1.25;
   level = level + 1; // level increases
-  print(level);
+  //print(level);
   } else if (key == '2') { // press 8 to decrease speed (level)
   ball.xSpeed = ball.xSpeed*0.75;
   ball.ySpeed = ball.ySpeed*0.75;
